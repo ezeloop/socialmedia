@@ -247,7 +247,8 @@ width: 375px;
 
 @media screen and (max-width: 600px) {
   body{
-width: 600px;
+    width: 500px;
+    margin: auto;
   }
   .container{
     display:grid;
