@@ -1,0 +1,265 @@
+body{
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  margin: 0 100px 0px 100px;
+  width: 1440px;
+  transition: .3s ease all;
+}
+
+body.dark{
+  background-color: hsl(230, 17%, 14%);
+  color:hsl(225, 100%, 98%);
+}
+
+body.dark .render-row, body.dark .render-likes{
+  background-color: hsl(228, 28%, 20%);
+}
+
+body.dark .render-row:hover,body.dark .render-likes:hover{
+  background-color: #30475e;
+}
+
+h1{
+  font-size: 2.5rem;
+  margin:auto;
+}
+
+h4{
+  margin:auto;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: hsl(228, 12%, 44%)
+}
+
+h5{
+  color: hsl(163, 72%, 41%);
+}
+
+span{
+  width:30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+}
+
+.all-the-content{
+  display: grid;
+  justify-content: center;
+}
+
+.title{
+  margin-bottom: 3px;
+  padding-bottom: 0;
+}
+
+.sub-title{
+  margin-top:0;
+  padding-top: 0;
+}
+
+
+.container{
+  display:grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-template-rows: 200px 50px 130px 130px ;
+  grid-gap:20px;
+}
+
+.render-row{
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.render-row.dark{
+  background-color: hsl(225, 100%, 98%);
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.social-media{
+  display:grid;
+  grid-template-columns: 130px;
+  grid-column: 1/-1;
+  grid-template-rows: 1fr;
+}
+
+.render-likes{
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 130px 20px 10px;
+  grid-template-rows: 1fr 1fr;
+  background-color: hsl(225, 100%, 98%);
+}
+
+.top-left{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-right{
+  display: grid;
+  margin-right: :15px;
+
+  grid-column: -1/-1;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bottom-left{
+  display: grid;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-right{
+  display: grid;
+
+
+  grid-column: -1/-1;
+  align-items: center;
+  justify-content: center;
+}
+.overview{
+  grid-column:1/-1;
+}
+.icon{
+  font-size: 22px;
+}
+
+.fa-facebook-square{
+color: hsl(195, 100%, 50%)
+}
+
+.hr-blue{
+  size:15px;
+  background: hsl(195, 100%, 50%);
+  margin-top: 0px;
+  border-radius: 3px;
+}
+.hr-instagram{
+    background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    margin-top: 0px;
+    border-radius: 3px;
+}
+.hr-youtube{
+  background: hsl(348, 97%, 39%);
+  margin-top: 0px;
+  border-radius: 3px;
+}
+
+.fa-twitter{
+color: hsl(195, 100%, 50%)
+}
+.fa-instagram{
+  background:linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+
+}
+
+.fa-youtube-square {
+  color:hsl(348, 97%, 39%)
+}
+
+.render-row:hover{
+background-color: #dbdbdb;
+}
+.render-likes:hover{
+  background-color: #dbdbdb;
+}
+
+.switch{
+  background: #343d5b;
+  border-radius: 1000px;
+  border:none;
+  position: relative;
+  cursor:pointer;
+  display:flex;
+  outline: none;
+
+}
+
+.switch::after{
+content:"";
+display: block;
+width: 30px;
+height: 30px;
+position: absolute;
+background: #f1f1f1;
+top:0;
+left: 0;
+right: unset;
+border-radius: 100px;
+transition: .3s ease all;
+box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+
+}
+
+
+
+.dark-mode{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-bottom: 20px;
+
+}
+
+.switch.active{
+background: orange;
+color:#000;
+
+}
+
+.switch.active::after{
+right:0;
+left: unset;
+
+}
+
+
+
+
+@media screen and (max-width: 375px) {
+
+  body{
+width: 375px;
+  }
+  .container{
+    display:grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 200px;
+    grid-gap:20px;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .dark-mode
+  {
+    width: 71%;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body{
+width: 600px;
+  }
+  .container{
+    display:grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 200px;
+    grid-gap:20px;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+
+  .dark-mode
+  {
+    width: 71%;
+    margin-bottom: 20px;
+  }
+}
