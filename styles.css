@@ -260,7 +260,8 @@ width: 375px;
 
   .dark-mode
   {
-    width: 71%;
+    display: flex;
+    justify-content: flex-end; 
     margin-bottom: 20px;
   }
 }
